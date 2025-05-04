@@ -12,7 +12,7 @@ public class main {
         Knight knight1 = new Knight();
         Knight knight2 = new Knight();
 
-        Battle battle = new Battle(List.of(knight1), List.of(knight1));
+        Battle battle = new Battle(List.of(knight1), List.of(knight2));
 
         BattleManager battleManager = new BattleManager(battle);
         battleManager.printBattleState();
