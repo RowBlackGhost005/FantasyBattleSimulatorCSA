@@ -13,17 +13,16 @@ import java.util.Scanner;
 
 /**
  * Class that holds all the logic for managing user input and user interface
- *
  * Developed by: Luis Marin
  */
 public class PlayerInterface {
 
-    private Scanner userInput;
+    private final Scanner userInput;
 
-    private BattleManager battleManager;
-    private EntityManager entityManager;
+    private final BattleManager battleManager;
+    private final EntityManager entityManager;
 
-    private Random random;
+    private final Random random;
 
     private boolean gameOn;
 
@@ -64,7 +63,7 @@ public class PlayerInterface {
     /**
      * Prompts the user the main menu of the game.
      *
-     * @return The menu opton selected by the user.
+     * @return The menu option selected by the user.
      */
     private int selectMenuOption(){
         System.out.println("=== MENU ===");
@@ -189,7 +188,7 @@ public class PlayerInterface {
             System.out.println("\nStarting battle!\n");
             battleLoop();
 
-        } catch (NoBattleAvailableException e) {
+        } catch (NoBattleAvailableException | BattleOverException e) {
             System.out.println(e.getMessage());
         }
     }
@@ -205,13 +204,12 @@ public class PlayerInterface {
 
             if(battleManager.getTurn()){
                 managePlayerTurn();
-                System.out.println("Press Enter to continue");
-                userInput.nextLine();
             }else{
                 manageIATurn();
-                System.out.println("Press Enter to continue");
-                userInput.nextLine();
             }
+
+            System.out.println("Press Enter to continue");
+            userInput.nextLine();
 
             battleManager.switchTurn();
         }while(!battleManager.isBattleOver());
@@ -247,7 +245,7 @@ public class PlayerInterface {
         }while(character == null);
 
         //Select what the Character at play will do
-        int option = -1;
+        int option;
 
         do {
             try{
@@ -404,10 +402,10 @@ public class PlayerInterface {
      * Utility method used to serve the same function as Scanner.nextInt() but with a different approach to
      * be able to control the exceptions thrown.
      * @return Integer inputted by the user.
-     * @throws InvalidInputException Exception if the user tries to input something that its not a number.
+     * @throws InvalidInputException Exception if the user tries to input something that it's not a number.
      */
     private int getPlayerInputInteger() throws InvalidInputException {
-        int input = -1;
+        int input;
         try{
             input =  Integer.parseInt(userInput.nextLine());
         }catch (NumberFormatException e){
