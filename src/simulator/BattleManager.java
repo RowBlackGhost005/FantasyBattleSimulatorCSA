@@ -1,10 +1,7 @@
 package simulator;
 
 import entities.Entity;
-import exceptions.DefeatedCharacterException;
-import exceptions.InvalidCharacterPositionException;
-import exceptions.NoBattleAvailableException;
-import exceptions.OutOfEnergyException;
+import exceptions.*;
 import game.Battle;
 import game.EntityManager;
 import modifiers.Defense;
@@ -44,7 +41,7 @@ public class BattleManager {
      * Starts the battle inside this BattleManager by randomly selecting the team who has the first turn.
      * @throws NoBattleAvailableException If no battle is inside this BattleManager yet
      */
-    public void startBattle() throws NoBattleAvailableException {
+    public void startBattle() throws NoBattleAvailableException, BattleOverException {
 
         if(this.battle == null){
             throw new NoBattleAvailableException("No battle has been created yet!");
