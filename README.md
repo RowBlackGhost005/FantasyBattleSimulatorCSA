@@ -19,7 +19,7 @@ Below you have the information about every character currently in the game.
 ---
 **STATS EXPLANATION**
 | Stat | Description
-| -- | -- | -- | -- | -- | -- | -- |
+| -- | -- |
 | **Health** | Health points of the character, if reaches 0 the character is defeated. |
 | **Damage** | Base damage points that will affect the targets health if the target has no Defense. |
 | **Defense** | Points to be absorbed of the incoming Damage before deducting Health Points.|
