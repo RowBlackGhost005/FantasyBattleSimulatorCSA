@@ -7,6 +7,7 @@ This game features:
 - **Turn based combat** (Each turn you can select any standing character to attack with).
 - **Pseudo AI opponent** (Your opponent uses their characters based on chances of performing every action so you can play and have different battles every time).
 - **Battle Creation** (Create your own team of up to 32 characters to fight agains the enemy team also defined by you giving you a lot of possible combinations) [Good luck trying to keep track of more than 4 characters per team].
+- **Console Based Gameplay** (This game plays in console with a strong error handling for bad inputs to ensure smooth gameplay).
 
 # Meet the characters
 Below you have the information about every character currently in the game.
