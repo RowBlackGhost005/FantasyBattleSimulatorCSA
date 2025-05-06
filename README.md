@@ -1,5 +1,5 @@
 # Fantasy Battle Simulator
-**Fantasy Battle Simulator** is a console base game where you can create your own team and fight agains the enemy team in a turn based combat with multiple habilities giving you the ability to simulate lots of combats.
+**Fantasy Battle Simulator** is a console base game where you can create your own team and fight against the enemy team in a turn based combat with multiple habilities giving you the ability to simulate lots of combats.
 
 This game features:
 - **4 Different Playable Characters** ([Knight, Mage, Archer, Assassin]) each with different stats and an unique special hability).
